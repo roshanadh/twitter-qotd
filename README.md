@@ -6,7 +6,7 @@ Tweets the quote followed by the author name.
 
 ## Deployment
 Uses Heroku for deployment.
-Deployment URL: https://roshan-qotd.herokuapp.com/
+Heroku app URL: https://roshan-qotd.herokuapp.com/
 
 Make GET requests to https://roshan-qotd.herokuapp.com/of_qotd for invoking the tweet function. However, twitter API does not allow duplicate status updates.
 
