@@ -9,6 +9,8 @@ Uses *Heroku* for deployment.
 
 Heroku app URL: https://roshan-qotd.herokuapp.com/
 
+Twitter account: https://twitter.com/of_qotd
+
 Make **GET** requests to https://roshan-qotd.herokuapp.com/of_qotd for invoking the tweet function. 
 However, Twitter API does not allow duplicate status updates.
 
