@@ -1,5 +1,5 @@
 # twitter-qotd
-Tweets Quote of the day from *TheySaidSo*
+Tweets Quote of the day from *TheySaidSo*.
 * Makes GET request to the https://quotes.rest/qod API
 * Parses the response into a JavaScript object
 * Tweets the quote followed by the author name
