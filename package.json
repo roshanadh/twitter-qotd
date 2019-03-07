@@ -1,0 +1,33 @@
+{
+  "name": "twitter-qotd",
+  "version": "1.0.0",
+  "description": "Tweets quote of the day from TheySaidSo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roshanadh/twitter-qotd.git"
+  },
+  "keywords": [
+    "tweet",
+    "quote",
+    "of",
+    "the",
+    "day",
+    "bot"
+  ],
+  "author": "Roshan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roshanadh/twitter-qotd/issues"
+  },
+  "homepage": "https://github.com/roshanadh/twitter-qotd#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "request": "^2.88.0",
+    "twit": "^2.2.11"
+  }
+}
