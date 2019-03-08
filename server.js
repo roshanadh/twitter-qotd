@@ -15,13 +15,14 @@ const T = new Twit({
 
 function tweetIt(){
     let tweetMsg = '';
+    let hashTags = ' #DailyQuotes #QuoteOfTheDay'
     request.get(URL, (err, res, body) => {
         if(err) console.log(err);
 
         let parsedBody = JSON.parse(body);
         let quote = parsedBody.contents.quotes[0].quote;
         let author = parsedBody.contents.quotes[0].author;
-        tweetMsg = `'${quote}' - ${author}`;
+        tweetMsg = `'${quote}' - ${author}` + `${hashTags}`;
         console.log(tweetMsg);
         
         T.post('statuses/update', { status: tweetMsg }, function(err, data, response) {
