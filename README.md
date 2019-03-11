@@ -7,8 +7,6 @@ Tweets Quote of the day from *TheySaidSo*.
 ## Deployment
 Uses *Heroku* for deployment.
 
-Heroku app URL: https://roshan-qotd.herokuapp.com/
-
 Twitter account: https://twitter.com/of_qotd
 
 Twitter API does not allow duplicate status updates within a certain interval of time.
