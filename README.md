@@ -7,7 +7,7 @@ Tweets Quote of the day from *TheySaidSo*.
 ## Deployment
 Uses *Heroku* for deployment.
 
-Twitter account: https://twitter.com/of_qotd
+Twitter account: https://twitter.com/daytheofquote
 
 Twitter API does not allow duplicate status updates within a certain interval of time.
 
