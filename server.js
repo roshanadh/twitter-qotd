@@ -26,8 +26,16 @@ function tweetIt(){
         console.log(tweetMsg);
         
         T.post('statuses/update', { status: tweetMsg }, function(err, data, response) {
-            if(err)
+            if(err){
                 console.log(err);
+                if(err.code == 186){
+                    tweetMsg = `'${quote}' - ${author}`;
+                    T.post('statuses/update', { status: tweetMsg }, function(err, data, response) {
+                        if(err) console.log(err);            
+                    });
+                }
+            }
+
         });
     })
 }
