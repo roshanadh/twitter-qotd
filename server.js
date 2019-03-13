@@ -16,28 +16,32 @@ const T = new Twit({
 function tweetIt(){
     let tweetMsg = '';
     let hashTags = ' #DailyQuotes #QuoteOfTheDay'
+    var lenQuote, lenAuthor, lenHashTags, lenTweetMsg;
     request.get(URL, (err, res, body) => {
         if(err) console.log(err);
 
         let parsedBody = JSON.parse(body);
         let quote = parsedBody.contents.quotes[0].quote;
         let author = parsedBody.contents.quotes[0].author;
-        tweetMsg = `'${quote}' - ${author}` + `${hashTags}`;
-        console.log(tweetMsg);
+
+        lenQuote = quote.length;
+        lenAuthor = author.length;
+        lenHashTags = hashTags.length;
+
+        if(lenQuote + lenAuthor + lenHashTags <= 280)
+            tweetMsg = `'${quote}' - ${author}` + `${hashTags}`;
+        else if(lenQuote + lenAuthor <= 280 && lenQuote + lenAuthor + lenHashTags > 280)
+            tweetMsg = `'${quote}' - ${author}`;
+        else 
+            tweetMsg = 'Have a good day everyone!' + hashTags;
+
+        lenTweetMsg = tweetMsg.length;
+        console.log(tweetMsg, lenTweetMsg);
         
         T.post('statuses/update', { status: tweetMsg }, function(err, data, response) {
-            if(err){
-                console.log(err);
-                if(err.code == 186){
-                    tweetMsg = `'${quote}' - ${author}`;
-                    T.post('statuses/update', { status: tweetMsg }, function(err, data, response) {
-                        if(err) console.log(err);            
-                    });
-                }
-            }
-
+            if(err) console.log(err, tweetMsg);
         });
-    })
+    });
 }
 const app = express();
 app.all('/of_qotd', (req, res) => {
