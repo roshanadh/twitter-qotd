@@ -7,13 +7,10 @@ Tweets Quote of the day from *TheySaidSo*.
 ## Deployment
 Uses *Heroku* for deployment.
 
-Heroku app URL: https://roshan-qotd.herokuapp.com/
+Twitter account: https://twitter.com/daytheofquote
 
-Twitter account: https://twitter.com/of_qotd
+Twitter API does not allow duplicate status updates within a certain interval of time.
 
-Make **GET** requests to https://roshan-qotd.herokuapp.com/of_qotd for invoking the tweet function. 
-However, Twitter API does not allow duplicate status updates.
-
-So, https://uptimerobot.com/ makes the requests in definite intervals to invoke the function.
+So, https://uptimerobot.com/ is used to invoke the tweet function in definite intervals.
 
 
