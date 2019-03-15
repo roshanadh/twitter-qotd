@@ -5,10 +5,10 @@ const PORT = process.env.PORT || 3000;
 const URL = 'https://quotes.rest/qod';
  
 const T = new Twit({
-    consumer_key: process.env.BOT_CONSUMER_KEY || 'NCVQwjaDzDRyXuMNp0tKLxKN0',
-    consumer_secret: process.env.BOT_CONSUMER_SECRET || 'DbBNaadqqoxNINjg4L3tk3P0WPSKxae8QJlZXgpOkM9WhO6Rf1',
-    access_token: process.env.BOT_ACCESS_TOKEN || '1103973630520655872-Pd0k2EUxSTLxevViC6zKPyADuJrQre',
-    access_token_secret: process.env.BOT_ACCESS_TOKEN_SECRET || 'lrfTpwdSN5VFu6AW04GrE201baY8qsiTu05uPhqsEzsed',
+    consumer_key: process.env.BOT_CONSUMER_KEY,
+    consumer_secret: process.env.BOT_CONSUMER_SECRET,
+    access_token: process.env.BOT_ACCESS_TOKEN,
+    access_token_secret: process.env.BOT_ACCESS_TOKEN_SECRET,
     timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
     strictSSL:            true,     // optional - requires SSL certificates to be valid.
 })
