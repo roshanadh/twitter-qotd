@@ -38,7 +38,7 @@ function tweetIt(){
         lenTweetMsg = tweetMsg.length;
         console.log(tweetMsg, lenTweetMsg);
 
-        // Search if the tweet has already been tweeted by the accound
+        // Search if the tweet has already been tweeted by the account
         T.get('search/tweets', { q: '"' + tweetMsg +'" from:daytheofquote', count: 100 }, function(err, data, response) {
             if(data.statuses.length == 0){
                 // Tweet does not exist as of yet
