@@ -16,7 +16,7 @@ const T = new Twit({
 function tweetIt(){
     let tweetMsg = '';
     let hashTags = ' #DailyQuotes #QuoteOfTheDay'
-    var lenQuote, lenAuthor, lenHashTags, lenTweetMsg, isAlreadyTweeted;
+    var lenQuote, lenAuthor, lenHashTags, lenTweetMsg;
     request.get(URL, (err, res, body) => {
         if(err) console.log(err);
 
