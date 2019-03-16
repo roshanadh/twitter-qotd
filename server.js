@@ -57,7 +57,7 @@ function tweetIt(){
                 // Tweet already exists
                 console.log("Tweet IS a duplicate, not going to be tweeted!");
             }
-          });
+        });
     });
 }
 const app = express();
