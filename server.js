@@ -42,14 +42,20 @@ function tweetIt(){
         T.get('search/tweets', { q: '"' + tweetMsg +'" from:daytheofquote', count: 100 }, function(err, data, response) {
             if(data.statuses.length == 0){
                 // Tweet does not exist as of yet
-                console.log("Tweet IS NOT a duplicate!");
+                console.log("Tweet IS NOT a duplicate, going to be tweeted!");
+                T.post('statuses/update', { status: tweetMsg }, function(err, data, response) {
+                    if(err) console.log(err, tweetMsg);
+                });
+            }
+            else if(data.statuses.length > 0 && (tweetMsg == 'Have a good day everyone!' + hashTags)){
+                console.log("Tweet IS a duplicate: " + tweetMsg + ", going to be tweeted!");
                 T.post('statuses/update', { status: tweetMsg }, function(err, data, response) {
                     if(err) console.log(err, tweetMsg);
                 });
             }
             else{
                 // Tweet already exists
-                console.log("Tweet IS a duplicate!");
+                console.log("Tweet IS a duplicate, not going to be tweeted!");
             }
           });
     });
