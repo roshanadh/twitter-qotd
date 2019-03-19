@@ -1,5 +1,5 @@
 # twitter-qotd 
-![Heroku](http://heroku-badge.herokuapp.com/?app=roshan-qotd&style=flat&svg=1&root=of_qotd) [![Assertible status](https://assertible.com/apis/07dfcd2c-23b7-43fd-831e-63e1df7f1204/status?api_token=iSBLmckiZ7PFMxXU)](https://assertible.com/dashboard#/services/07dfcd2c-23b7-43fd-831e-63e1df7f1204/results)
+[![Assertible status](https://assertible.com/apis/07dfcd2c-23b7-43fd-831e-63e1df7f1204/status?api_token=iSBLmckiZ7PFMxXU)](https://assertible.com/dashboard#/services/07dfcd2c-23b7-43fd-831e-63e1df7f1204/results)
 
 Tweets Quote of the day from *TheySaidSo*.
 * Makes GET request to the https://quotes.rest/qod API
