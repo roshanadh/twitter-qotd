@@ -13,6 +13,6 @@ Twitter account: https://twitter.com/daytheofquote
 
 Twitter API does not allow duplicate status updates within a certain interval of time.
 
-So, https://uptimerobot.com/ is used to invoke the tweet function in definite intervals.
+So, https://assertible.com/ is used to monitor the API endpoint daily which invokes the tweet function.
 
 
