@@ -15,8 +15,9 @@ const T = new Twit({
 
 function tweetIt(){
     let tweetMsg = '';
-    let hashTags = ' #DailyQuotes #QuoteOfTheDay'
-    var lenQuote, lenAuthor, lenHashTags, lenTweetMsg;
+    let hashTag = ' #QuoteOfTheDay';
+    let hashTags = ' #DailyQuotes #QuoteOfTheDay';
+    var lenQuote, lenAuthor, lenHashTag, lenHashTags, lenTweetMsg;
     request.get(URL, (err, res, body) => {
         if(err) console.log(err);
 
@@ -26,11 +27,14 @@ function tweetIt(){
 
         lenQuote = quote.length;
         lenAuthor = author.length;
+        lenHashTag = hashTag.length;
         lenHashTags = hashTags.length;
 
         if(lenQuote + lenAuthor + lenHashTags <= 280)
             tweetMsg = `'${quote}' - ${author}` + `${hashTags}`;
-        else if(lenQuote + lenAuthor <= 280 && lenQuote + lenAuthor + lenHashTags > 280)
+        else if(lenQuote + lenAuthor + lenHashTags > 280 && lenQuote + lenAuthor + lenHashTag<= 280)
+            tweetMsg = `'${quote}' - ${author}`;
+        else if(lenQuote + lenAuthor + lenHashTags > 280 && lenQuote + lenAuthor <= 280)
             tweetMsg = `'${quote}' - ${author}`;
         else 
             tweetMsg = 'Have a good day everyone!' + hashTags;
