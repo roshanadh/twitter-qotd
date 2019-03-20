@@ -61,7 +61,7 @@ function tweetIt(){
     });
 }
 const app = express();
-app.all('/of_qotd', (req, res) => {
+app.all('/daytheofquote', (req, res) => {
     res.status(200).send("This is the response!");
     tweetIt();
     
